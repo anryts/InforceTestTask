@@ -1,0 +1,33 @@
+﻿.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  margin-top: 20px;
+}

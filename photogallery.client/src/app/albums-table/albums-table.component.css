@@ -1,0 +1,55 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%; /* Adjust width or use max-width for better control */
+  margin-bottom: 20px; /* Space between cards */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: 0.3s; /* Add transition effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+.card-img-top {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card-title {
+  font-size: 1.2rem; /* Adjust title size */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use the full height of the viewport */
+}
+
+.row {
+  flex: 1; /* Ensures that .row takes up all available space pushing pagination controls down */
+}
+
+.pagination-controls {
+  margin-top: auto; /* Pushes pagination controls to the bottom */
+  padding: 20px 0; /* Adds some spacing */
+  background-color: #f8f9fa; /* Gives a different background color */
+  text-align: center; /* Centers the buttons */
+}

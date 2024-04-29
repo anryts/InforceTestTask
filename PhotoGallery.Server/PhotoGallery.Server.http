@@ -1,0 +1,6 @@
+@PhotoGallery.Server_HostAddress = http://localhost:5218
+
+GET {{PhotoGallery.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+//TODO: need to test

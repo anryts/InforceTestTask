@@ -1,0 +1,19 @@
+﻿<nav class="navbar">
+  <div class="nav-brand">
+    <a routerLink="/">Photo Gallery</a>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/albums">All Albums</a></li>
+    <li *ngIf="authService.currentUserValue"><a routerLink="/my-albums">My Albums</a></li>
+    <li *ngIf="authService.currentUserValue"><a routerLink="/add-album">Add Album</a></li>
+    <li *ngIf="authService.currentUserValue"><a routerLink="/upload-image">Upload Image</a></li>
+    <!-- Show Login and Register only if the user is not logged in -->
+    <li *ngIf="!authService.currentUserValue"><a routerLink="/login">Login</a></li>
+    <li *ngIf="!authService.currentUserValue"><a routerLink="/register">Register</a></li>
+    <!-- Logout appears only if the user is logged in -->
+    <li *ngIf="authService.currentUserValue" (click)="logout()">Logout</li>
+  </ul>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,21 @@
+<div class="container mt-3">
+  <h2>Images</h2>
+  <div class="row">
+    <div class="col-6" *ngFor="let image of images; let i = index">
+      <div class="card">
+        <img class="card-img-top" [src]="image.url" alt="Album Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ image.name }}</h5>
+        </div>
+      </div>
+      <!-- Add a spacer div if it's the last image and the count is odd -->
+      <div *ngIf="images.length % 2 !== 0 && i === images.length - 1" class="col-6"></div>
+    </div>
+  </div>
+  <!-- Pagination controls -->
+  <div class="pagination-controls">
+    <button class="btn btn-primary" (click)="previousPage(albumId)" [disabled]="currentPage === 0">Previous</button>
+    <button class="btn btn-primary" (click)="nextPage(albumId)" [disabled]="disableNextButton">Next</button>
+  </div>
+</div>
+

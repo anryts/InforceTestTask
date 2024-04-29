@@ -1,0 +1,23 @@
+<div class="container mt-3">
+  <div class="upload-container">
+    <!-- Dropdown for selecting an album -->
+    <div class="centered-container">
+      <button mat-button [matMenuTriggerFor]="menu">{{ selectedAlbumName || 'Select Album' }}</button>
+      <mat-menu #menu="matMenu" >
+        <button mat-menu-item  *ngFor="let album of albums" (click)="selectAlbum(album)">
+          {{ album.name }}
+        </button>
+      </mat-menu>
+    </div>
+
+    <!-- Upload image section -->
+    <div class="upload-fields">
+      <input type="text" [(ngModel)]="imageTitle" placeholder="Enter image title" class="form-control">
+      <input type="file" (change)="onFileSelected($event)" class="form-control">
+      <button class="upload-button" (click)="uploadImage()"
+              [disabled]="!selectedAlbumId || !selectedFile || !imageTitle">
+        Upload Image
+      </button>
+    </div>
+  </div>
+</div>
